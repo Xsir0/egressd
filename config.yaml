@@ -1,0 +1,19 @@
+listen_addr: "0.0.0.0:8080"
+log_level: "info"
+default_forward_url: ""
+upstream_timeout_seconds: 30
+max_idle_conns: 100
+max_idle_conns_per_host: 100
+idle_conn_timeout: 90
+tls_handshake_timeout: 10
+expect_continue_timeout: 1
+response_header_timeout: 30
+max_body_size: 10MB
+max_proxy_concurrency: 100
+allowed_forwarded_hosts:
+  - api.openai.com
+  - generativelanguage.googleapis.com
+
+allowed_source_ips:
+  - 127.0.0.1
+  - 192.168.1.0/24
